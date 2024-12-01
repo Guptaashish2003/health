@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Nav from './nav/Nav'
 import SideBar from './sideBar/SideBar'
+import Diahistorycard from './diahistorycard/Diahistorycard';
 
 const url = 'https://fedskillstest.coalitiontechnologies.workers.dev';
 
@@ -26,9 +27,11 @@ const App = () => {
   }
   ,[id])
   return (
-    <div className='w-[98%] mx-auto'>
+
+    <div className='w-[98%] mx-auto flex justify-between'>
       <Nav />
       <SideBar setId={setId} data={data}/>
+      <Diahistorycard/>
     </div>
   )
 }
