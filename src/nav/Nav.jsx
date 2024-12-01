@@ -20,7 +20,7 @@ const Nav = () => {
 
         </span>
         <span className='flex items-center justify-center gap-x-2 mr-3'>
-        <hr class="w-0.5 h-6 opacity-35 border-none bg-black"/>
+        <hr className="w-0.5 h-6 opacity-35 border-none bg-black"/>
         <span className='size-4'> <img className='w-full h-full' src="/assets/setting.png" alt="arrow-down" /></span>
         <span className='w-1 h-3'> <img className='w-full h-full' src="/assets/menu.png" alt="arrow-down" /></span>
         </span>
