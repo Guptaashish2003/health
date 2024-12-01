@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Nav from './nav/Nav'
 import SideBar from './sideBar/SideBar'
+import Diahistorycard from './diahistorycard/Diahistorycard';
 
 const url = 'https://fedskillstest.coalitiontechnologies.workers.dev';
 
@@ -22,7 +23,11 @@ const App = () => {
   return (
     <>
     <Nav />
-    <SideBar data={data}/>
+    <div className='flex w-full justify-between'>
+      <SideBar data={data}/>
+      <Diahistorycard/>
+
+    </div>
     </>
   )
 }
