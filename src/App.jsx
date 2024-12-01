@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Nav from './nav/Nav'
 import SideBar from './sideBar/SideBar'
 import Diahistorycard from './diahistorycard/Diahistorycard';
+import PatientProfileCard from './component/PatientProfileCard';
 
 const url = 'https://fedskillstest.coalitiontechnologies.workers.dev';
 
@@ -28,12 +29,13 @@ const App = () => {
   ,[id])
   return (
 
-    <div className='w-[98%] '>
+    <div className='w-[98%] mx-auto '>
       <Nav />
-      <div className='mx-auto flex justify-between'>
+      <div className='mx-auto mt-8 flex justify-between'>
 
       <SideBar setId={setId} data={data}/>
       <Diahistorycard/>
+      <PatientProfileCard data={patientData}/>
       </div>
     </div>
   )
