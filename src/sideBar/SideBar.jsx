@@ -3,7 +3,7 @@ import Card from './_component/Card'
 
 const SideBar = ({data}) => {
   return (
-    <div className='w-[90%] max-w-[367px] bg-white rounded-2xl'>
+    <div className='w-[90%] max-w-[367px] bg-white rounded-2xl max-h-[90vh] overflow-scroll'>
         <div className='flex p-4 justify-between font-semibold border '>
             <h3 className=' text-lg'>Patients</h3>
             <div className='w-4'>
