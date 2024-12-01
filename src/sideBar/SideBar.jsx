@@ -1,9 +1,9 @@
 import React from 'react'
 import Card from './_component/Card'
 
-const SideBar = ({data}) => {
+const SideBar = ({data,setId}) => {
   return (
-    <div className='w-[90%] max-w-[367px] bg-white rounded-2xl max-h-[90vh] overflow-scroll'>
+    <div className='w-[90%] max-w-[367px] mt-8 bg-white rounded-3xl max-h-[90vh] overflow-scroll'>
         <div className='flex p-4 justify-between font-semibold border '>
             <h3 className=' text-lg'>Patients</h3>
             <div className='w-4'>
@@ -12,7 +12,7 @@ const SideBar = ({data}) => {
         </div>
         <div>
             {data?.map((item,index)=>{
-                return <Card key={index} profile={item.profile_picture} name={item.name} gender={item.gender} age={item.age} />
+                return <Card setId={setId} key={index} index={index} profile={item.profile_picture} name={item.name} gender={item.gender} age={item.age} />
             })}
             
         </div>

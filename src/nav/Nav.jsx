@@ -3,7 +3,7 @@ import { navItems } from '../utils/data'
 import NavButton from './_componets/NavButton'
 const Nav = () => {
   return (
-    <nav className='p-1 w-[96%] h-12 mt-2 bg-[#ffff] mx-auto flex items-center rounded-3xl ' >
+    <nav className='p-1 w-full h-12 mt-2 bg-[#ffff] mx-auto flex items-center rounded-3xl ' >
       <span className='h-10 p-2 relative  '>
       <img className='h-full w-full ' src="/assets/TestLogo.svg" alt="" />
       </span>
@@ -19,6 +19,13 @@ const Nav = () => {
           <p className='text-[#000] opacity-60 text-xs'>General Practitioner</p>
 
         </span>
+        <span className='flex items-center justify-center gap-x-2 mr-3'>
+        <hr class="w-0.5 h-6 opacity-35 border-none bg-black"/>
+        <span className='size-4'> <img className='w-full h-full' src="/assets/setting.png" alt="arrow-down" /></span>
+        <span className='w-1 h-3'> <img className='w-full h-full' src="/assets/menu.png" alt="arrow-down" /></span>
+        </span>
+
+
 
       </div>
 

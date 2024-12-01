@@ -1,7 +1,6 @@
 import React from 'react'
 
-const NavButton = ({key,data={data}}) => {
-    console.log(data)
+const NavButton = ({data={data}}) => {
   return (
     <button  className='flex focus:bg-[#01F0D0] py-1 px-2 rounded-3xl gap-x-1 items-center justify-center' >
       <span className='size-3 '>

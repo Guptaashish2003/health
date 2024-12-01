@@ -1,8 +1,9 @@
 import React from "react";
 
-const Card = ({profile,name,gender,age}) => {
+const Card = ({profile,name,gender,age,index,setId}) => {
+
   return (
-    <div className="flex justify-between items-center px-6 py-2 ">
+    <div onClick={()=>setId(index)} className="flex justify-between items-center px-6 py-2 ">
       <div className="flex gap-x-2 items-center justify-center capitalize">
         <img
           src={profile}

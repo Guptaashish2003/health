@@ -8,6 +8,8 @@ const username = 'coalition';
 const password = 'skills-test';
 const App = () => {
   const [data,setData] = useState([]);
+  const [id,setId] = useState(0);
+  const [patientData,setPatientData] = useState({});
   useEffect(()=>{
     const headers = new Headers();
     headers.set('Authorization', 'Basic ' + btoa(username + ":" + password));
@@ -19,11 +21,15 @@ const App = () => {
     }
     getData()
   },[])
+  useEffect(()=>{
+    setPatientData(data[id]);
+  }
+  ,[id])
   return (
-    <>
-    <Nav />
-    <SideBar data={data}/>
-    </>
+    <div className='w-[98%] mx-auto'>
+      <Nav />
+      <SideBar setId={setId} data={data}/>
+    </div>
   )
 }
 
