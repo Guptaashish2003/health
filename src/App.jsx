@@ -28,10 +28,13 @@ const App = () => {
   ,[id])
   return (
 
-    <div className='w-[98%] mx-auto flex justify-between'>
+    <div className='w-[98%] '>
       <Nav />
+      <div className='mx-auto flex justify-between'>
+
       <SideBar setId={setId} data={data}/>
       <Diahistorycard/>
+      </div>
     </div>
   )
 }
