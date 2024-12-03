@@ -14,7 +14,7 @@ const Nav = () => {
       </div>
       <div className='flex gap-x-1 max-sm:items-center '>
         <span className='size-9 max-sm:size-6'> <img className='w-full h-full' src="/assets/doctor.png" alt="doctor" /></span>
-        <span className='felx flex-col text-xs max-sm:text-[7px] items-center justify-center'>
+        <span className='felx flex-col text-xs max-sm:text-[9px] items-center justify-center'>
           <p className='text-[#000] '>Dr. Jose Simmons</p>
           <p className='text-[#000] opacity-60 \'>General Practitioner</p>
 
