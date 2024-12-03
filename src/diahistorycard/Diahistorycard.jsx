@@ -17,7 +17,7 @@ const Diahistorycard = () => {
     },
   ];
   return (
-    <div className="w-3/5 h-full bg-[#F4F0FE] ">
+    <div className="w-full h-[65%] bg-[#FFFFFF] rounded-3xl">
       <div className=" grid grid-cols-[0.7fr_0.3fr]">
         <Chart />
         <div>
