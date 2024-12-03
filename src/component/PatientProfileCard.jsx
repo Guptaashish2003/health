@@ -4,86 +4,67 @@ import { formatDate ,checkFemale} from "../utils/utils";
 
 const PatientProfileCard = ({ data }) => {
     const isFemale = checkFemale(data?.gender)
+  const ListData =  [
+      {
+        icon: "/assets/BirthIcon.svg",
+        alt: "DateOfBirth",
+        label: "Date Of Birth",
+        value: formatDate(data?.date_of_birth),
+      },
+      {
+        icon: isFemale ? "/assets/FemaleIcon.svg" : "/assets/MaleIcon.svg",
+        alt: isFemale ? "Female" : "Male",
+        label: "Gender",
+        value: data?.gender,
+      },
+      {
+        icon: "/assets/PhoneIcon.svg",
+        alt: "ContactInfo",
+        label: "Contact Info.",
+        value: data?.phone_number,
+      },
+      {
+        icon: "/assets/PhoneIcon.svg",
+        alt: "EmergencyContact",
+        label: "Emergency Contacts",
+        value: data?.emergency_contact,
+      },
+      {
+        icon: "/assets/InsuranceIcon.svg",
+        alt: "InsuranceProvider",
+        label: "Insurance Provider",
+        value: data?.insurance_type,
+      },
+    ]
     return (
-    <div className="aspect-[367/1216] text-center bg-[#FFF] w-full max-w-[367px] max-h-[602px] flex justify-evenly flex-col rounded-3xl">
-      <span className="aspect-square mx-auto mt-5 size-36">
+    <div className="aspect-[367/1216] text-center bg-[#FFF] w-full max-w-[367px] max-h-[602px] grid grid-cols-1 justify-evenly  rounded-3xl">
+      <span className="aspect-square mx-auto mt-5 col-span-2 size-36">
         <img
           className="w-full h-full "
           src={data?.profile_picture}
           alt="profile"
         />
       </span>
-      <span className="flex flex-col items-center justify-center gap-y-2 mt-2">
+      <span className="col-span-2 items-center justify-center gap-y-2 mt-2">
         <p className="text-lg font-semibold">{data?.name}</p>
       </span>
-      <div className="flex flex-col text-start">
-        <div className="flex w-full justify-start ml-2 items-start gap-x-10">
-          <span className="size-10">
-            <img
-              className="w-full h-full"
-              src="/assets/BirthIcon.svg"
-              alt="DateofBirth"
-            />
-          </span>
-          <span className="py-2 ">
-            <p className="text-[#000] text-xs">Date Of Birth</p>
-            <p className="text-[#000] text-xs">{formatDate(data?.date_of_birth)}</p>
-          </span>
-        </div>
-        <div className="flex w-full justify-start ml-2 mt-4 items-start gap-x-10">
-          <span className="size-10">
-            <img
-              className="w-full h-full"
-              src={isFemale ? "/assets/FemaleIcon.svg" : "/assets/MaleIcon.svg"}
-              alt={isFemale ? "Female":"Male"}
-            />
-          </span>
-          <span className="py-2 ">
-            <p className="text-[#000] text-xs">Gender</p>
-            <p className="text-[#000] text-xs">{data?.gender}</p>
-          </span>
-        </div>
-        <div className="flex w-full justify-start ml-2 mt-4 items-start gap-x-10">
-          <span className="size-10">
-            <img
-              className="w-full h-full"
-              src="/assets/PhoneIcon.svg"
-              alt="contactInfo"
-            />
-          </span>
-          <span className="py-2 ">
-            <p className="text-[#000] text-xs">Contact Info.</p>
-            <p className="text-[#000] text-xs">{data?.phone_number}</p>
-          </span>
-        </div>
-        <div className="flex w-full justify-start ml-2 mt-4 items-start gap-x-10">
-          <span className="size-10">
-          <img
-              className="w-full h-full"
-              src="/assets/PhoneIcon.svg"
-              alt="EmgergencyContact"
-            />
-          </span>
-          <span className="py-2 ">
-            <p className="text-[#000] text-xs">Emergency Contacts</p>
-            <p className="text-[#000] text-xs">{data?.emergency_contact}</p>
-          </span>
-        </div>
-        <div className="flex w-full justify-start ml-2 mt-4 items-start gap-x-10">
-          <span className="size-10">
-          <img
-              className="w-full h-full"
-              src="/assets/InsuranceIcon.svg"
-              alt="EmgergencyContact"
-            />
-          </span>
-          <span className="py-2 ">
-            <p className="text-[#000] text-xs">Insurance Provider</p>
-            <p className="text-[#000] text-xs">{data?.insurance_type}</p>
-          </span>
-        </div>
-      </div>
-      <button className="bg-[#01F0D0] w-44 px-2 py-1.5 mx-auto  rounded-3xl">Show All Information</button>
+      <div className="grid grid-cols-1 px-2 gap-y-4 text-start">
+      {ListData.map((item, index) => (
+  <div key={index} className="grid grid-cols-[1fr_5fr] items-center gap-x-4">
+    {/* Icon Column */}
+    <span className="flex justify-start size-10">
+      <img className="h-full w-full" src={item.icon} alt={item.alt} />
+    </span>
+    {/* Text Column */}
+    <span className="w-full flex flex-col text-start">
+      <p className="text-[#000] text-xs">{item.label}</p>
+      <p className="text-[#000] text-xs">{item.value}</p>
+    </span>
+  </div>
+))}
+</div>
+
+      <button className="bg-[#01F0D0] w-44 px-2 h-10 mt-5 mx-auto col-span-2  rounded-3xl">Show All Information</button>
     </div>
   );
 };

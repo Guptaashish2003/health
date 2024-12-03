@@ -31,9 +31,9 @@ const App = () => {
   ,[id])
   return (
 
-    <div className='w-[98%] mx-auto '>
+    <div className='w-[98%] mx-auto  overflow-x-hidden'>
       <Nav />
-      <div className='mx-auto mt-8 flex justify-between'>
+      <div className='mx-auto mt-8 flex justify-between '>
 
       <SideBar setId={setId} data={data}/>
       <div className='w-[60%] mx-auto px-4 '>
