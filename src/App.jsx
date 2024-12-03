@@ -3,6 +3,7 @@ import Nav from './nav/Nav'
 import SideBar from './sideBar/SideBar'
 import Diahistorycard from './diahistorycard/Diahistorycard';
 import PatientProfileCard from './component/PatientProfileCard';
+import DiagList from './component/DiagList';
 
 const url = 'https://fedskillstest.coalitiontechnologies.workers.dev';
 
@@ -34,7 +35,10 @@ const App = () => {
       <div className='mx-auto mt-8 flex justify-between'>
 
       <SideBar setId={setId} data={data}/>
+      <div className='w-[60%] mx-auto px-4 '>
       <Diahistorycard/>
+      <DiagList data = { patientData?.diagnostic_list}/>
+      </div>
       <PatientProfileCard data={patientData}/>
       </div>
     </div>

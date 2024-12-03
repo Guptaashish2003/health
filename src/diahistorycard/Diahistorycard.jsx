@@ -3,7 +3,7 @@ import { Chart } from "../component/Chart";
 
 const Diahistorycard = () => {
   return (
-    <div className="w-3/5 h-full">
+    <div className="w-full h-[65%] bg-[#FFFFFF] rounded-3xl">
       <div className="w-1/2">
         <Chart />
       </div>
