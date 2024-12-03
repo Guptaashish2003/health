@@ -1,9 +1,9 @@
 import React from "react";
 
-const Card = ({profile,name,gender,age,index,setId}) => {
+const Card = ({profile,name,gender,age,id,index,setId}) => {
 
   return (
-    <div onClick={()=>setId(index)} className="flex justify-between items-center max-xl:justify-center xl:px-6 py-2 cursor-pointer" tabIndex={0}>
+    <div style={ {background:index===id&& "#D8FCF7"}} onClick={()=>setId(index)} className="flex justify-between items-center max-xl:justify-center xl:px-6 py-2 cursor-pointer focus:#D8FCF7"  tabIndex={0}>
       <div className="flex xl:gap-x-2 items-center justify-center capitalize">
         <img
           src={profile}

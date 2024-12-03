@@ -7,7 +7,7 @@ const SideBar = ({ data, id, setId, setPatientData }) => {
   }, [id]);
   const [open, setOpen] = useState(true);
   return (
-    <div className="max-xl:w-16 w-[20%]  max-w-[367px]  bg-white rounded-3xl max-h-[90vh] overflow-scroll">
+    <div className="max-xl:w-16  w-[20%]  max-w-[367px]  bg-white rounded-3xl max-h-[90vh] overflow-scroll">
       <div className="flex max-xl:p-3 max-xl:justify-center p-4 justify-between font-semibold border ">
         <h3 className="max-xl:hidden text-lg">Patients</h3>
         <div className="w-4">
@@ -27,6 +27,7 @@ const SideBar = ({ data, id, setId, setPatientData }) => {
               setId={setId}
               key={index}
               index={index}
+              id={id}
               profile={item.profile_picture}
               name={item.name}
               gender={item.gender}
