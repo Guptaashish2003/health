@@ -44,15 +44,15 @@ const Diahistorycard = () => {
                   ></span>
                   <h3 className="font-semibold text-md">{item.title}</h3>
                 </div>
-                <p>{item.value}</p>
-                <p className="flex gap-x-1 text-sm text-[#072635] items-center">{item.icon} {item.description}</p>
+                <p className="text-xl  font-semibold" >{item.value}</p>
+                <p className="flex gap-x-1 max-sm:text-sm text-lg text-[#072635] items-center">{item.icon} {item.description}</p>
               </div>
             {index === 0 && <hr className="w-full my-4 text-lg max-xl:hidden" />}
             </Fragment>
           ))}
         </div>
       </div>
-      <div className="flex justify-between max-lg:justify-center items-center flex-wrap gap-y-2">
+      <div className="flex justify-between max-lg:justify-center items-center flex-wrap gap-y-4">
         {report.map((item, index) => (
           <Card key={index} logo={item.logo} title={item.title} value={item.value} description={item.description} color={item.color} />
         ))}

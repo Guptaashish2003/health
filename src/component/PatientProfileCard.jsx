@@ -37,7 +37,7 @@ const PatientProfileCard = ({ data }) => {
       },
     ]
     return (
-    <div className="aspect-[367/1216] text-center bg-[#FFF] w-full max-w-[367px] max-h-[602px] grid grid-cols-1 justify-evenly  rounded-3xl">
+    <div className="aspect-[367/1216] text-center bg-[#FFF] w-full max-md:mx-auto max-w-[367px] max-h-[602px] max-md:grid-flow-row grid grid-cols-1 justify-evenly  rounded-3xl">
       <span className="aspect-square mx-auto mt-5 col-span-2 size-36">
         <img
           className="w-full h-full "

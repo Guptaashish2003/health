@@ -1,9 +1,9 @@
 import React from 'react'
 
 const LabResultCard = ({data}) => {
-    console.log(data)
+   
   return (
-    <div className='w-full bg-[#FFFFFF] h-[296px] rounded-3xl p-2 mt-3 overflow-y-clip'>
+    <div className='w-full bg-[#FFFFFF] h-[296px] my-3 rounded-3xl p-2 overflow-y-clip'>
         <h1 className='text-2xl font-semibold mt-2 mb-4 text-[#000]'>Lab Results</h1>
        <div className='overflow-y-scroll max-h-[260px]'>
        {
