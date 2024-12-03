@@ -27,3 +27,7 @@ export const checkFemale = (gender) =>{
     }
     return false;
 }
+export const formatmonth = (month) =>{
+    // january to jan
+    return month.substring(0,3);
+}

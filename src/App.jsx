@@ -41,13 +41,13 @@ const App = () => {
   return (
     <div className="w-[98%] mx-auto  overflow-hidden">
       <Nav />
-      <div className="mx-auto mt-8 flex max-md:flex-col-reverse justify-between ">
+      <div className="mx-auto mt-5 max-sm:mt-4 flex max-md:flex-col-reverse justify-between ">
         <SideBar setPatientData={setPatientData} setId={setId} id={id} data={data} />
-        <div className="w-[60%]  mx-auto px-2 max-sm:w-full ">
-          <Diahistorycard />
+        <div className="w-[58%]  mx-auto px-2 max-sm:w-full ">
+          <Diahistorycard data = {patientData?.diagnosis_history} />
           <DiagList data={patientData?.diagnostic_list} />
         </div>
-        <div className="w-[20%] max-sm:w-full max-sm:px-2">
+        <div className="w-[20%] max-sm:w-full max-sm:px-2 mr-2">
           <PatientProfileCard data={patientData} />
           <LabResultCard data={patientData?.lab_results} />
         </div>
