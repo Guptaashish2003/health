@@ -29,9 +29,9 @@ const Diahistorycard = () => {
   return (
     <div className="w-full h-max rounded-2xl grid bg-white p-4" >
       <h2 className="text-3xl font-semibold my-2">Diagnosis History</h2>
-      <div className="grid grid-cols-[0.7fr_auto] p-4 bg-[#F4F0FE] rounded-xl my-4">
+      <div className="grid grid-cols-[0.8fr_auto] p-4 bg-[#F4F0FE] rounded-xl my-4 w-full">
         <div>
-          <Chart className="w!-full !h-full" />
+          <Chart className="!w-full !h-full" />
         </div>
         <div className="p-2 ">
           {BDPressure.map((item, index) => (
