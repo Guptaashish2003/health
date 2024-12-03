@@ -4,6 +4,7 @@ import SideBar from './sideBar/SideBar'
 import Diahistorycard from './diahistorycard/Diahistorycard';
 import PatientProfileCard from './component/PatientProfileCard';
 import DiagList from './component/DiagList';
+import LabResultCard from './component/LabResultCard';
 
 const url = 'https://fedskillstest.coalitiontechnologies.workers.dev';
 
@@ -39,7 +40,11 @@ const App = () => {
       <Diahistorycard/>
       <DiagList data = { patientData?.diagnostic_list}/>
       </div>
-      <PatientProfileCard data={patientData}/>
+     <div className='w-[20%]'>
+     <PatientProfileCard data={patientData}/>
+      <LabResultCard data = {patientData?.lab_results}/>
+
+     </div>
       </div>
     </div>
   )

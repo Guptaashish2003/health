@@ -4,9 +4,8 @@ import { formatDate ,checkFemale} from "../utils/utils";
 
 const PatientProfileCard = ({ data }) => {
     const isFemale = checkFemale(data?.gender)
-    console.log(isFemale)
     return (
-    <div className="aspect-[367/1216] text-center bg-[#FFF] w-[20%] max-w-[367px] max-h-[602px] flex justify-evenly flex-col rounded-3xl">
+    <div className="aspect-[367/1216] text-center bg-[#FFF] w-full max-w-[367px] max-h-[602px] flex justify-evenly flex-col rounded-3xl">
       <span className="aspect-square mx-auto mt-5 size-36">
         <img
           className="w-full h-full "
