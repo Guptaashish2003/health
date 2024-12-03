@@ -4,4 +4,10 @@
 
 :root {
   background: #F6F7F8 0% 0% no-repeat padding-box;
+  --unnamed-font-family-manrope: 'Manrope', sans-serif;
+}
+
+/* Apply the font globally */
+body {
+  font-family: var(--unnamed-font-family-manrope);
 }
