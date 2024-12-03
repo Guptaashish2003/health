@@ -13,18 +13,14 @@ import { Line } from 'react-chartjs-2';
 
 
 // Register required Chart.js components
-ChartJS.register(LineElement, PointElement, LinearScale, CategoryScale, Tooltip, Title);
+ChartJS.register(LineElement, PointElement, LinearScale, CategoryScale, Tooltip);
 
 export const options = {
   responsive: true,
   plugins: {
     legend: {
       position: 'top',
-    },
-    title: {
-      display: true,
-      text: 'Chart.js Line Chart',
-    },
+    }
   },
 };
 
@@ -36,16 +32,16 @@ export const data = {
     {
       label: 'Dataset 1',
       data: [99,93,648,38,84,38,884,93],
-      borderColor: 'rgb(255, 99, 132)',
-      backgroundColor: 'rgba(255, 99, 132, 0.5)',
+      borderColor: '#C26EB4',
+      backgroundColor: '#C26EB4',
       tension: 0.4, 
       cubicInterpolationMode: "monotone", 
     },
     {
       label: 'Dataset 2',
       data: [45,74,83,98,53,17,82,28],
-      borderColor: 'rgb(53, 162, 235)',
-      backgroundColor: 'rgba(53, 162, 235, 0.5)',
+      borderColor: '#7E6CAB',
+      backgroundColor: '#7E6CAB',
       tension: 0.4, 
       cubicInterpolationMode: "monotone", 
     },

@@ -3,7 +3,7 @@ import React from "react";
 const Card = ({profile,name,gender,age,index,setId}) => {
 
   return (
-    <div onClick={()=>setId(index)} className="flex justify-between items-center px-6 py-2  " tabIndex={0}>
+    <div onClick={()=>setId(index)} className="flex justify-between items-center px-6 py-2 cursor-pointer" tabIndex={0}>
       <div className="flex gap-x-2 items-center justify-center capitalize">
         <img
           src={profile}
