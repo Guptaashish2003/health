@@ -29,11 +29,11 @@ const Diahistorycard = () => {
   return (
     <div className="w-full h-max rounded-2xl grid bg-white p-4" >
       <h2 className="text-3xl font-semibold my-2">Diagnosis History</h2>
-      <div className="grid grid-cols-[0.8fr_auto] p-4 bg-[#F4F0FE] rounded-xl my-4 w-full">
+      <div className="grid grid-cols-[0.8fr_auto] max-xl:grid-cols-1 p-4 bg-[#F4F0FE] rounded-xl my-4 w-full">
         <div>
           <Chart className="!w-full !h-full" />
         </div>
-        <div className="p-2 ">
+        <div className="p-2 max-xl:flex max-xl:gap-x-4">
           {BDPressure.map((item, index) => (
             <Fragment>
               <div key={index} className="flex flex-col gap-y-2">
@@ -47,12 +47,12 @@ const Diahistorycard = () => {
                 <p>{item.value}</p>
                 <p className="flex gap-x-1 text-sm text-[#072635] items-center">{item.icon} {item.description}</p>
               </div>
-            {index === 0 && <hr className="w-full my-4 text-lg" />}
+            {index === 0 && <hr className="w-full my-4 text-lg max-xl:hidden" />}
             </Fragment>
           ))}
         </div>
       </div>
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between max-lg:justify-center items-center flex-wrap gap-y-2">
         {report.map((item, index) => (
           <Card key={index} logo={item.logo} title={item.title} value={item.value} description={item.description} color={item.color} />
         ))}
