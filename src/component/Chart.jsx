@@ -48,6 +48,6 @@ export const data = {
   ],
 };
 
-export function Chart() {
-  return <Line className='w-full h-full' options={options} data={data} />;
+export function Chart({className}) {
+  return <Line className={`${className}`} options={options} data={data} />;
 }
