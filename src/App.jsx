@@ -14,28 +14,37 @@ const App = () => {
   const [data,setData] = useState([]);
   const [id,setId] = useState(0);
   const [patientData,setPatientData] = useState({});
+  const [loading,setLoading] = useState(true);
   useEffect(()=>{
     const headers = new Headers();
     headers.set('Authorization', 'Basic ' + btoa(username + ":" + password));
+   try {
     const getData = async()=>{
       const res = await fetch('https://fedskillstest.coalitiontechnologies.workers.dev/',{method:"GET",headers});
       const data = await res.json();
       console.log(data);
       setData(data);
+      setPatientData(data[0]);
     }
     getData()
+    setLoading(false);
+    
+   } catch (error) {
+    alert(`try agin later getting error ${error.message}`);
+   }
   },[])
-  useEffect(()=>{
-    setPatientData(data[id]);
+  if(loading){
+    return <div className='w-screen h-screen justify-center items-center'>loading...</div>
   }
-  ,[id])
+  
+
   return (
 
     <div className='w-[98%] mx-auto '>
       <Nav />
       <div className='mx-auto mt-8 flex justify-between'>
 
-      <SideBar setId={setId} data={data}/>
+      <SideBar setPatientData={setPatientData} setId={setId} id={id} data={data}/>
       <div className='w-[60%] mx-auto px-4 '>
       <Diahistorycard/>
       <DiagList data = { patientData?.diagnostic_list}/>

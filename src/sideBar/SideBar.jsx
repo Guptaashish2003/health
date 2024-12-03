@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Card from "./_component/Card";
 
-const SideBar = ({data,setId}) => {
+const SideBar = ({data,id,setId,setPatientData}) => {
+    useEffect(()=>{
+        setPatientData(data[id]);
+      }
+      ,[id])
   return (
     <div className=' w-[20%]  max-w-[367px]  bg-white rounded-3xl max-h-[90vh] overflow-scroll'>
         <div className='flex p-4 justify-between font-semibold border '>
